@@ -3,10 +3,20 @@
   .card-section {
     width: 100%;
   }
+
+  .card {
+    width: 90%;
+    margin: 10px auto;
+
+  }
+
+  .profile-picture {
+    width: 30%;
+    top: -20%; /* Adjust the value here */
+  }
   
   .social-links-container {
-    width: 100%;
-    margin-top: 10px;
+    width: 90%;
   }
   
   .social-links {
@@ -14,15 +24,9 @@
   }
   
   .social-links li {
-    margin: 5px;
+    flex-basis: 33.33%;
   }
 }
-
-
-
-
-
-
 
 .App {
   display: flex;
