@@ -5,30 +5,30 @@
   }
 
   .card {
-    
-    height: 200px;
-  width: 80%;
-  margin: 10px auto;
-
+    height: 120px; /* Adjust the height as needed */
+    width: 90%; /* Adjust the width as needed */
+    margin: 10px auto;
   }
 
   .profile-picture {
-    width: 30%;
-    top: -30%; /* Adjust the value here */
+    width: 20%; /* Adjust the width as needed */
+    top: -15%; /* Adjust the value here */
   }
-  
+
   .social-links-container {
     width: 90%;
   }
-  
+
   .social-links {
     flex-wrap: wrap;
   }
-  
+
   .social-links li {
-    flex-basis: 30%;
+    flex-basis: 33.33%;
+    max-width: 33.33%;
   }
 }
+
 
 .App {
   display: flex;
