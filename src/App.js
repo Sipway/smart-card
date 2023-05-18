@@ -22,8 +22,8 @@ function App() {
       setUser(data.data());
       
     }
-    catch(err){
-      console.error(err)
+    catch(err1){
+      console.error(err1)
     }
     
 
