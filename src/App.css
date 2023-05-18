@@ -1,31 +1,72 @@
+/* Styles for screens with a maximum width of 768px (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+  .card-section {
+    width: 100%;
+  }
+  
+  .social-links-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .social-links {
+    flex-wrap: wrap;
+  }
+  
+  .social-links li {
+    margin: 5px;
+  }
+}
+
+
+
+
+
+
+
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #1f2130;
-  height: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  padding-top: 2px;
 }
 
+
 .card-section {
-  width: 50%;
-  margin: 10px;
+  width: 50%; /* Adjust the width as needed */
+  margin-top: 10px; /* Overlap the card section on top */
 }
 
 .card {
   background-color: #1f2130;
-  border: 2px solid gold;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  animation: rotateGradient 5s linear infinite;
   height: 200px;
   width: 80%;
   margin: 10px auto;
   position: relative;
 }
+
+@keyframes rotateGradient {
+  0% {
+    border: 2px solid gold;
+  }
+  50% {
+    border: 2px solid cyan;
+  }
+  100% {
+    border: 2px solid gold;
+  }
+}
+
+
 
 .profile-picture {
   width: 20%;
@@ -41,6 +82,7 @@
   font-size: 24px;
   color: white;
   margin-top: 10%;
+  text-align: center;
 }
 
 .social-links-container {
@@ -61,23 +103,9 @@
   margin: 0 10px;
 }
 
+
+
 .social-links li img {
-  width: 60px;
-  height: 60px;
-}
-
-@media (max-width: 768px) {
-  .card-section {
-    width: 100%;
-  }
-
-  .card {
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  .profile-picture {
-    width: 30%;
-    top: -5%;
-  }
+  width: 70px;
+  height: 70px;
 }
