@@ -5,14 +5,16 @@
   }
 
   .card {
-    width: 90%;
-    margin: 10px auto;
+    
+    height: 200px;
+  width: 80%;
+  margin: 10px auto;
 
   }
 
   .profile-picture {
     width: 30%;
-    top: -20%; /* Adjust the value here */
+    top: -30%; /* Adjust the value here */
   }
   
   .social-links-container {
@@ -24,7 +26,7 @@
   }
   
   .social-links li {
-    flex-basis: 33.33%;
+    flex-basis: 30%;
   }
 }
 
