@@ -16,7 +16,7 @@
   }
 
   .social-links-container {
-    width: 90%;
+    width: 100%;
   }
 
   .social-links {
@@ -24,8 +24,8 @@
   }
 
   .social-links li {
-    flex-basis: 33.33%;
-    max-width: 33.33%;
+    flex-basis: 20%;
+    max-width: 20%;
   }
 }
 
