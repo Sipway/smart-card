@@ -34,7 +34,7 @@ function App() {
         <div className="card">
           {user && (
             <>
-              <img src={user.profile_picture} alt="Profile" className="profile-picture" />
+              <img src="/whatsapp.png" alt="Profile" className="profile-picture" />
               <h2 className="profile-name">{user.name}</h2>
             </>
           )}
