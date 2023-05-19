@@ -18,7 +18,6 @@ function App() {
     youtube: '',
     discord: '',
     onlyfans: '',
-    facebook: '',
     snapchat: '',
     telegram: '',
     location: '',
@@ -59,24 +58,24 @@ function App() {
       {user && (
         <div className="social-links-container">
           <ul className="social-links">
+            {user.mobile && (
+              <li>
+                <a href={`tel:${user.mobile}`}>
+                  <img src="/phone.png" alt="Call" />
+                </a>
+              </li>
+            )}
             {user.whatsapp && (
               <li>
-                <a href={user.whatsapp}>
+                <a href={`https://wa.me/${user.whatsapp}`}>
                   <img src="/whatsapp.png" alt="WhatsApp" />
                 </a>
               </li>
             )}
-            {user.linkedin && (
+            {user.facebook && (
               <li>
-                <a href={user.linkedin}>
-                  <img src="/linkedin.png" alt="LinkedIn" />
-                </a>
-              </li>
-            )}
-            {user.twitter && (
-              <li>
-                <a href={user.twitter}>
-                  <img src="/twitter.png" alt="Twitter" />
+                <a href={`https://www.facebook.com/${user.facebook}`}>
+                  <img src="/facebook.png" alt="Facebook" />
                 </a>
               </li>
             )}
@@ -87,24 +86,24 @@ function App() {
                 </a>
               </li>
             )}
-            {user.mobile && (
-              <li>
-                <a href={`tel:${user.mobile}`}>
-                  <img src="/phone.png" alt="Call" />
-                </a>
-              </li>
-            )}
-            {user.email && (
-              <li>
-                <a href={`mailto:${user.email}`}>
-                  <img src="/email.png" alt="Email" />
-                </a>
-              </li>
-            )}
             {user.instagram && (
               <li>
-                <a href={user.instagram}>
+                <a href={`https://www.instagram.com/${user.instagram}`}>
                   <img src="/instagram.png" alt="Instagram" />
+                </a>
+              </li>
+            )}
+            {user.linkedin && (
+              <li>
+                <a href={`https://www.linkedin.com/in/${user.linkedin}`}>
+                  <img src="/linkedin.png" alt="LinkedIn" />
+                </a>
+              </li>
+            )}
+            {user.twitter && (
+              <li>
+                <a href={`https://www.twitter.com/${user.twitter}`}>
+                  <img src="/twitter.png" alt="Twitter" />
                 </a>
               </li>
             )}
@@ -136,23 +135,16 @@ function App() {
                 </a>
               </li>
             )}
-            {user.facebook && (
-              <li>
-                <a href={user.facebook}>
-                  <img src="/facebook.png" alt="Facebook" />
-                </a>
-              </li>
-            )}
             {user.snapchat && (
               <li>
-                <a href={user.snapchat}>
+                <a href={`https://www.snapchat.com/add/${user.snapchat}`}>
                   <img src="/snapchat.png" alt="Snapchat" />
                 </a>
               </li>
             )}
             {user.telegram && (
               <li>
-                <a href={user.telegram}>
+                <a href={`https://t.me/${user.telegram}`}>
                   <img src="/telegram.png" alt="Telegram" />
                 </a>
               </li>
@@ -166,14 +158,12 @@ function App() {
             )}
             {user.skype && (
               <li>
-                <a href={user.skype}>
+                <a href={`skype:${user.skype}?chat`}>
                   <img src="/skype.png" alt="Skype" />
                 </a>
               </li>
             )}
           </ul>
-
-
         </div>
       )}
     </div>
