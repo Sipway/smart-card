@@ -10,6 +10,20 @@ function App() {
     mobile: '',
     website: '',
     whatsapp: '',
+    linkedin: '',
+    twitter: '',
+    email: '',
+    instagram: '',
+    medium: '',
+    youtube: '',
+    discord: '',
+    onlyfans: '',
+    facebook: '',
+    snapchat: '',
+    telegram: '',
+    location: '',
+    skype: '',
+    title: '', // Added "title" field
   });
 
   const { docId } = useParams();
@@ -36,45 +50,132 @@ function App() {
             <>
               <img src="/profile.png" alt="Profile" className="profile-picture" />
               <h2 className="profile-name">{user.name}</h2>
+              <p className="profile-title">{user.title}</p> {/* Added "title" display */}
             </>
           )}
         </div>
       </div>
 
-      <div className="social-links-container">
-        <ul className="social-links">
-          <li>
-            <a href={user.whatsapp}>
-              <img src="/whatsapp.png" alt="WhatsApp" />
-            </a>
-          </li>
-          <li>
-            <a href={user.linkedin}>
-              <img src="/linkedin.png" alt="LinkedIn" />
-            </a>
-          </li>
-          <li>
-            <a href={user.twitter}>
-              <img src="/twitter.png" alt="Twitter" />
-            </a>
-          </li>
-          <li>
-            <a href={user.website}>
-              <img src="/website.png" alt="Website" />
-            </a>
-          </li>
-          <li>
-            <a href={user.website}>
-              <img src="/phone.png" alt="call" />
-            </a>
-          </li>
-          <li>
-            <a href={user.website}>
-              <img src="/email.png" alt="email" />
-            </a>
-          </li>
-        </ul>
-      </div>
+      {user && (
+        <div className="social-links-container">
+          <ul className="social-links">
+            {user.whatsapp && (
+              <li>
+                <a href={user.whatsapp}>
+                  <img src="/whatsapp.png" alt="WhatsApp" />
+                </a>
+              </li>
+            )}
+            {user.linkedin && (
+              <li>
+                <a href={user.linkedin}>
+                  <img src="/linkedin.png" alt="LinkedIn" />
+                </a>
+              </li>
+            )}
+            {user.twitter && (
+              <li>
+                <a href={user.twitter}>
+                  <img src="/twitter.png" alt="Twitter" />
+                </a>
+              </li>
+            )}
+            {user.website && (
+              <li>
+                <a href={user.website}>
+                  <img src="/website.png" alt="Website" />
+                </a>
+              </li>
+            )}
+            {user.mobile && (
+              <li>
+                <a href={`tel:${user.mobile}`}>
+                  <img src="/phone.png" alt="Call" />
+                </a>
+              </li>
+            )}
+            {user.email && (
+              <li>
+                <a href={`mailto:${user.email}`}>
+                  <img src="/email.png" alt="Email" />
+                </a>
+              </li>
+            )}
+            {user.instagram && (
+              <li>
+                <a href={user.instagram}>
+                  <img src="/instagram.png" alt="Instagram" />
+                </a>
+              </li>
+            )}
+            {user.medium && (
+              <li>
+                <a href={user.medium}>
+                  <img src="/medium.png" alt="Medium" />
+                </a>
+              </li>
+            )}
+            {user.youtube && (
+              <li>
+                <a href={user.youtube}>
+                  <img src="/youtube.png" alt="YouTube" />
+                </a>
+              </li>
+            )}
+            {user.discord && (
+              <li>
+                <a href={user.discord}>
+                  <img src="/discord.png" alt="Discord" />
+                </a>
+              </li>
+            )}
+            {user.onlyfans && (
+              <li>
+                <a href={user.onlyfans}>
+                  <img src="/onlyfans.png" alt="OnlyFans" />
+                </a>
+              </li>
+            )}
+            {user.facebook && (
+              <li>
+                <a href={user.facebook}>
+                  <img src="/facebook.png" alt="Facebook" />
+                </a>
+              </li>
+            )}
+            {user.snapchat && (
+              <li>
+                <a href={user.snapchat}>
+                  <img src="/snapchat.png" alt="Snapchat" />
+                </a>
+              </li>
+            )}
+            {user.telegram && (
+              <li>
+                <a href={user.telegram}>
+                  <img src="/telegram.png" alt="Telegram" />
+                </a>
+              </li>
+            )}
+            {user.location && (
+              <li>
+                <a href={user.location}>
+                  <img src="/location.png" alt="Location" />
+                </a>
+              </li>
+            )}
+            {user.skype && (
+              <li>
+                <a href={user.skype}>
+                  <img src="/skype.png" alt="Skype" />
+                </a>
+              </li>
+            )}
+          </ul>
+
+
+        </div>
+      )}
     </div>
   );
 }
