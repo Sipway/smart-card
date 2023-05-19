@@ -41,6 +41,24 @@ function App() {
     getUser();
   }, []);
 
+  const downloadContact = () => {
+    const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:${user.name}
+TEL;TYPE=CELL:${user.mobile}
+EMAIL:${user.email}
+END:VCARD`;
+
+    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', 'my_contact.vcf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="App">
       <div className="card-section">
@@ -49,7 +67,10 @@ function App() {
             <>
               <img src="/profile.png" alt="Profile" className="profile-picture" />
               <h2 className="profile-name">{user.name}</h2>
-              <p className="profile-title">{user.title}</p> {/* Added "title" display */}
+              <p className="profile-title">{user.title}</p>
+              <button className="save-contact-btn" onClick={downloadContact}>
+                Save my contact
+              </button>
             </>
           )}
         </div>
@@ -58,7 +79,7 @@ function App() {
       {user && (
         <div className="social-links-container">
           <ul className="social-links">
-            {user.mobile && (
+          {user.mobile && (
               <li>
                 <a href={`tel:${user.mobile}`}>
                   <img src="/phone.png" alt="Call" />

@@ -124,5 +124,15 @@
   text-align: center;
 }
 
-
-
+.save-contact-btn {
+  background-color: #181924;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+}
