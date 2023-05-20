@@ -93,6 +93,14 @@ END:VCARD`;
                 </a>
               </li>
             )}
+            {user.email && (
+              <li>
+                  <a href={`mailto:${user.email}`}>
+                  <img src="/email.png" alt="Email" />
+                    </a>
+              </li>
+)}
+
             {user.facebook && (
               <li>
                 <a href={`https://www.facebook.com/${user.facebook}`}>
