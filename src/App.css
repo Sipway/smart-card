@@ -1,63 +1,81 @@
 /* Styles for screens with a maximum width of 768px (e.g., mobile devices) */
-@media (min-width: 100px) and (max-width: 667px) {
+@media (min-width: 100px) and (max-width: 866px) {
     .card-section {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .card {
-      height: 200px; /* Adjust the height as needed */
+        height: 200px;
+        /* Adjust the height as needed */
     }
-  
+
     .social-links li img {
-        width: 70px;
-        height: 70px;
+        width: 90px;
+        height: 90px;
         padding-bottom: 5px;
     }
-  
+
     .profile-picture {
-      width: 20%; /* Adjust the width as needed */
-      top: -15%; /* Adjust the value here */
+        width: 20%;
+        /* Adjust the width as needed */
+        top: -15%;
+        /* Adjust the value here */
     }
-  
-    .social-links-container {
-      width: 100%;
-    }
-  
+
     .social-links {
-      flex-wrap: wrap;
+        flex-wrap: wrap;
     }
-  
+
     .social-links li {
-      flex-basis: 20%;
-      max-width: 20%;
+        flex-basis: 20%;
+        max-width: 20%;
+        padding: 5px 5px 10px 5px;
     }
-  }
-  
-  @media (min-width: 667px) {
-      .card {
-          height: 200px;
-        }
-        .card-section {
-          width: 50%; /* Adjust the width as needed */
-          margin-top: 10px; /* Overlap the card section on top */
-        }
-        .social-links li img {
-          width: 70px;
-          height: 70px;
-        }
-  }
-  
-  .App {
+
+    .social-links-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 867px) {
+    .card {
+        height: 200px;
+    }
+
+    .card-section {
+        width: 50%;
+        /* Adjust the width as needed */
+        margin-top: 10px;
+        /* Overlap the card section on top */
+    }
+
+    .social-links li img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .social-links-container {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+.App {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: #1f2130;
     height: 100vh;
-    padding-top: 2px;
-  }
-  
-  .card {
+    padding-top: 70px;
+}
+
+.card {
     background-color: #1f2130;
     padding: 20px;
     display: flex;
@@ -68,21 +86,23 @@
     width: 80%;
     margin: 10px auto;
     position: relative;
-  }
-  
-  @keyframes rotateGradient {
+}
+
+@keyframes rotateGradient {
     0% {
-      border: 2px solid gold;
+        border: 2px solid gold;
     }
+
     50% {
-      border: 2px solid cyan;
+        border: 2px solid cyan;
     }
+
     100% {
-      border: 2px solid gold;
+        border: 2px solid gold;
     }
-  }
-  
-  .profile-picture {
+}
+
+.profile-picture {
     width: 20%;
     height: auto;
     border-radius: 50%;
@@ -90,41 +110,35 @@
     top: -25%;
     left: 50%;
     transform: translateX(-50%);
-  }
-  
-  .profile-name {
+}
+
+.profile-name {
     font-size: 24px;
     color: white;
     margin-top: 10%;
     text-align: center;
-  }
-  
-  .social-links-container {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .social-links {
+}
+
+.social-links {
     display: flex;
     justify-content: center;
     list-style-type: none;
     padding: 0;
-  }
-  
-  .social-links li {
+}
+
+.social-links li {
     margin: 0 10px;
-  }
-  
-  .profile-title {
+    padding: 5px 5px 10px 5px;
+}
+
+.profile-title {
     font-size: 18px;
     color: #fff;
     margin-top: 10px;
     text-align: center;
-  }
-  
-  .save-contact-btn {
+}
+
+.save-contact-btn {
     background-color: #181924;
     color: #ffffff;
     padding: 5px 10px;
@@ -135,5 +149,4 @@
     margin-top: 10px;
     font-weight: normal;
     font-family: Arial, sans-serif;
-  }
-  
+}
