@@ -1,138 +1,139 @@
 /* Styles for screens with a maximum width of 768px (e.g., mobile devices) */
 @media (min-width: 100px) and (max-width: 667px) {
-  .card-section {
-    width: 100%;
-  }
-
-  .card {
-    height: 120px; /* Adjust the height as needed */
-  }
-
-  .social-links li img {
-      width: 70px;
-      height: 70px;
-      padding-bottom: 5px;
-  }
-
-  .profile-picture {
-    width: 20%; /* Adjust the width as needed */
-    top: -15%; /* Adjust the value here */
-  }
-
-  .social-links-container {
-    width: 100%;
-  }
-
-  .social-links {
-    flex-wrap: wrap;
-  }
-
-  .social-links li {
-    flex-basis: 20%;
-    max-width: 20%;
-  }
-}
-
-@media (min-width: 667px) {
+    .card-section {
+      width: 100%;
+    }
+  
     .card {
-        height: 200px;
-      }
-      .card-section {
-        width: 50%; /* Adjust the width as needed */
-        margin-top: 10px; /* Overlap the card section on top */
-      }
-      .social-links li img {
+      height: 200px; /* Adjust the height as needed */
+    }
+  
+    .social-links li img {
         width: 70px;
         height: 70px;
-      }
-}
-
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #1f2130;
-  height: 100vh;
-  padding-top: 2px;
-}
-
-.card {
-  background-color: #1f2130;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  animation: rotateGradient 5s linear infinite;
-  width: 80%;
-  margin: 10px auto;
-  position: relative;
-}
-
-@keyframes rotateGradient {
-  0% {
-    border: 2px solid gold;
+        padding-bottom: 5px;
+    }
+  
+    .profile-picture {
+      width: 20%; /* Adjust the width as needed */
+      top: -15%; /* Adjust the value here */
+    }
+  
+    .social-links-container {
+      width: 100%;
+    }
+  
+    .social-links {
+      flex-wrap: wrap;
+    }
+  
+    .social-links li {
+      flex-basis: 20%;
+      max-width: 20%;
+    }
   }
-  50% {
-    border: 2px solid cyan;
+  
+  @media (min-width: 667px) {
+      .card {
+          height: 200px;
+        }
+        .card-section {
+          width: 50%; /* Adjust the width as needed */
+          margin-top: 10px; /* Overlap the card section on top */
+        }
+        .social-links li img {
+          width: 70px;
+          height: 70px;
+        }
   }
-  100% {
-    border: 2px solid gold;
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f2130;
+    height: 100vh;
+    padding-top: 2px;
   }
-}
-
-.profile-picture {
-  width: 20%;
-  height: auto;
-  border-radius: 50%;
-  position: absolute;
-  top: -25%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.profile-name {
-  font-size: 24px;
-  color: white;
-  margin-top: 10%;
-  text-align: center;
-}
-
-.social-links-container {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  padding: 0;
-}
-
-.social-links li {
-  margin: 0 10px;
-}
-
-.profile-title {
-  font-size: 18px;
-  color: #fff;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.save-contact-btn {
-  background-color: #181924;
-  color: #ffffff;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: 10px;
-  font-weight: normal;
-  font-family: Arial, sans-serif;
-}
+  
+  .card {
+    background-color: #1f2130;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: rotateGradient 5s linear infinite;
+    width: 80%;
+    margin: 10px auto;
+    position: relative;
+  }
+  
+  @keyframes rotateGradient {
+    0% {
+      border: 2px solid gold;
+    }
+    50% {
+      border: 2px solid cyan;
+    }
+    100% {
+      border: 2px solid gold;
+    }
+  }
+  
+  .profile-picture {
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .profile-name {
+    font-size: 24px;
+    color: white;
+    margin-top: 10%;
+    text-align: center;
+  }
+  
+  .social-links-container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    margin: 0 10px;
+  }
+  
+  .profile-title {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .save-contact-btn {
+    background-color: #181924;
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: normal;
+    font-family: Arial, sans-serif;
+  }
+  
